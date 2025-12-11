@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, td, tr {
+  border-collapse: collapse;
+  border: 2px solid black;
+}
+body {
+  background: url('bg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: Arial, sans-serif;
+}
+h2 {
+  margin: 10px auto 5px;
+  font-size: 30px;
+  color: white;
+  background: rgba(133, 55, 0, 0.85);
+  padding: 15px 40px;
+  border-radius: 30px;
+  box-shadow: 0 4px 12px rgba(54, 22, 1, 0.5);
+  text-align: center;
+  width: 500px;
+}
+a {
+  margin: 10px auto 5px;
+  font-size: 15px;
+  color: white;
+  background: rgba(133, 55, 0, 0.85);
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(54, 22, 1, 0.5);
+  text-align: center;
+}
+</style>
+</head>
+<body>
+  <h2>Customer Satisfaction Survey</h2>
+  <form>
+    <table align="center" cellpadding="10" style="background:#fff;">
+      <tr>
+        <td>Name:</td>
+        <td><input type="text" name="name" style="width:300px;" required></td>
+      </tr>
+      <tr>
+        <td>Email:</td>
+        <td><input type="email" name="email" style="width:300px;" required></td>
+      </tr>
+      <tr>
+        <td>How satisfied are you with our products?</td>
+        <td>
+          <input type="radio" name="satisfaction" value="very"> Very Satisfied<br>
+          <input type="radio" name="satisfaction" value="satisfied"> Satisfied<br>
+          <input type="radio" name="satisfaction" value="neutral"> Neutral<br>
+          <input type="radio" name="satisfaction" value="unsatisfied"> Unsatisfied<br>
+          <input type="radio" name="satisfaction" value="very_unsatisfied"> Very Unsatisfied
+        </td>
+      </tr>
+      <tr>
+        <td>Which products do you enjoy most?</td>
+        <td>
+          <input type="checkbox" name="favorite" value="cake"> Cake<br>
+          <input type="checkbox" name="favorite" value="bread"> Bread<br>
+          <input type="checkbox" name="favorite" value="cookies"> Cookies<br>
+          <input type="checkbox" name="favorite" value="muffins"> Muffins<br>
+          <input type="checkbox" name="favorite" value="others"> Others: 
+          <input type="text" name="other_favorite">
+        </td>
+      </tr>
+      <tr>
+        <td>Would you recommend us to friends?</td>
+        <td>
+          <select name="recommend" required>
+            <option value="">--Select--</option>
+            <option>Definitely</option>
+            <option>Probably</option>
+            <option>Not Sure</option>
+            <option>Probably Not</option>
+            <option>Definitely Not</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Suggestions for improvement:</td>
+        <td><textarea name="suggestions" rows="3" cols="50"></textarea></td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center">
+          <input type="submit" value="Submit Survey">
+          <input type="reset" value="Reset">
+        </td>
+      </tr>
+    </table>
+  </form>
+  <br><br>
+  <center><a href="index.html" title="Return to main page">Return</a></center>
+</body>
+
+</html>
+
+
+
+
+
+
+
