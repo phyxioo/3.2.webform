@@ -1,34 +1,95 @@
+<!DOCTYPE html>
 <html>
-<head></head>
+<head>
 <style>
-  label {
-    color:#000245;
-    font-family:"Comic Sans MS";
-	}
-  legend {
-    font-family:"Verdana";
-    color:white;
-	background-color: rgba(0, 0, 0, 0.8);
-	border: 3px solid black;
-	border-radius: 20px;
-	}
-  fieldset {
-    background: url('https://i1.pickpik.com/photos/971/210/372/mt-fuji-sea-of-clouds-sunrise-preview.jpg');
-    background-position: center;
-	background-repeat: no-repeat;
-	width: 400px;
-	height: 400px;
-	color: #000245;
-	}
-
+table, td, tr {
+  border-collapse: collapse;
+  border: 2px solid black;
+}
+body {
+  background: url('bg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: Arial, sans-serif;
+}
+h2 {
+  margin: 10px auto 5px;
+  font-size: 30px;
+  color: white;
+  background: rgba(133, 55, 0, 0.85);
+  padding: 15px 40px;
+  border-radius: 30px;
+  box-shadow: 0 4px 12px rgba(54, 22, 1, 0.5);
+  text-align: center;
+  width: 500px;
+}
+a {
+  margin: 10px auto 5px;
+  font-size: 15px;
+  color: white;
+  background: rgba(133, 55, 0, 0.85);
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(54, 22, 1, 0.5);
+  text-align: center;
+}
 </style>
-<form>
-	<fieldset>
-			<legend>Registry Form</legend>
-			
-            <label for="gender">Gender</label><br>
-            <input type="radio" value="male" id="gender" name="gender">Male<br>
-			<input type="radio" value="female" id="gender" name="gender">Female
-	</fieldset>
-</form>
+</head>
+<body>
+  <h2>Bakery Order Registration</h2>
+  <form>
+    <table align="center" cellpadding="10" style="background:#fff;">
+      <tr>
+        <td>Name:</td>
+        <td colspan="3">
+          <input type="text" name="fullname" style="width:400px;" required>
+        </td>
+      </tr>
+      <tr>
+        <td>Contact No:</td>
+        <td><input type="text" name="contact" required></td>
+        <td>Email:</td>
+        <td><input type="email" name="email" required></td>
+      </tr>
+      <tr>
+        <td>Delivery Address:</td>
+        <td colspan="3"><textarea name="address" rows="2" cols="60" required></textarea></td>
+      </tr>
+
+      <!-- Order Details -->
+      <tr>
+        <td>Choose Pastries:</td>
+        <td colspan="3">
+          <input type="checkbox" name="pastry" value="cake"> Cake<br>
+          <input type="checkbox" name="pastry" value="bread"> Bread<br>
+          <input type="checkbox" name="pastry" value="cookies"> Cookies<br>
+          <input type="checkbox" name="pastry" value="muffins"> Muffins<br>
+          <input type="checkbox" name="pastry" value="others"> Others: 
+          <input type="text" name="other_pastry">
+        </td>
+      </tr>
+      <tr>
+        <td>Quantity:</td>
+        <td colspan="3"><input type="number" name="quantity" min="1" required></td>
+      </tr>
+      <tr>
+        <td>Preferred Delivery Date:</td>
+        <td colspan="3"><input type="date" name="delivery_date" required></td>
+      </tr>
+      <tr>
+        <td>Special Instructions:</td>
+        <td colspan="3"><textarea name="instructions" rows="2" cols="60"></textarea></td>
+      </tr>
+
+      <tr>
+        <td colspan="4" align="center">
+          <input type="submit" value="Place Order">
+          <input type="reset" value="Reset">
+        </td>
+      </tr>
+    </table>
+  </form>
+  <br><br>
+  <center><a href="index.html" title="Return to main page">Return</a></center>
+</body>
 </html>
